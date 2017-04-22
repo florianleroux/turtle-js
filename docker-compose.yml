@@ -10,13 +10,9 @@ services:
       - ./db:/data/db
 
   turtle:
-    image: node:0.10-slim
+    image: turtle-js
     container_name: turtle
     restart: unless-stopped
-    volumes:
-      - $PWD:/app
-    working_dir: /app
-    command: node server.js
     ports:
       - 8070:8070
     depends_on:
