@@ -1,6 +1,6 @@
 FROM node:0.10.48-slim
 
-RUN apt update && apt install -qqy python git
+RUN apt update && apt install -qqy python git make
 
 COPY . /app
 WORKDIR /app
