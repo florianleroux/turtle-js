@@ -1,9 +1,9 @@
 FROM node:0.10.48-slim
 
+RUN apt update && apt install -qqy python git
+
 COPY . /app
 WORKDIR /app
-
-RUN apt update && apt install -qqy python git
 
 RUN mkdir /home/node
 RUN chown node:node /home/node
